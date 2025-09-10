@@ -1,0 +1,32 @@
+name: Build Android APK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+
+    - name: Install Cordova
+      run: npm install -g cordova
+
+    - name: Build Android APK
+      run: |
+        npm install
+        cordova platform add android
+        cordova build android
+
+    - name: Upload APK
+      uses: actions/upload-artifact@v2
+      with:
+        name: android-apk
+        path: platforms/android/app/build/outputs/apk/debug/app-debug.apk
