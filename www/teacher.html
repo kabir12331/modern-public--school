@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teacher Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="nav">
+    <a href="index.html">Logout</a>
+  </div>
+  <div class="container">
+    <h1>Teacher Dashboard</h1>
+    <div class="grid">
+      <div class="card">
+        <h2>Mark Attendance</h2>
+        <form id="markAttendance">
+          <input placeholder="Student ID" id="a_sid" required />
+          <input type="date" id="a_date" required />
+          <select id="a_status">
+            <option value="present">Present</option>
+            <option value="absent">Absent</option>
+          </select>
+          <button>Save</button>
+        </form>
+      </div>
+      <div class="card">
+        <h2>Add Grade</h2>
+        <form id="addGrade">
+          <input placeholder="Student ID" id="g_sid" required />
+          <input placeholder="Subject" id="g_subject" required />
+          <input placeholder="Term" id="g_term" required />
+          <input type="number" step="0.01" placeholder="Marks" id="g_marks" required />
+          <input type="number" step="0.01" placeholder="Max Marks (default 100)" id="g_max" />
+          <input placeholder="Grade (A/B/C...)" id="g_grade" />
+          <button>Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

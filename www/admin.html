@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="nav">
+    <a href="index.html">Logout</a>
+  </div>
+  <div class="container">
+    <h1>Admin Dashboard</h1>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Add Student</h2>
+        <form id="addStudent">
+          <input placeholder="Student Code" id="s_code" required />
+          <input placeholder="Name" id="s_name" required />
+          <input placeholder="Class" id="s_class" />
+          <input placeholder="Section" id="s_section" />
+          <input placeholder="Parent Contact" id="s_contact" />
+          <h4>Create Login (optional)</h4>
+          <input placeholder="Username" id="s_user" />
+          <input placeholder="Password" id="s_pass" type="password" />
+          <button>Add Student</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Add Teacher</h2>
+        <form id="addTeacher">
+          <input placeholder="Name" id="t_name" required />
+          <input placeholder="Designation" id="t_desig" required />
+          <input placeholder="Subject" id="t_subject" />
+          <h4>Create Login (optional)</h4>
+          <input placeholder="Username" id="t_user" />
+          <input placeholder="Password" id="t_pass" type="password" />
+          <button>Add Teacher</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Post Notice</h2>
+        <form id="addNotice">
+          <input placeholder="Title" id="n_title" required />
+          <textarea placeholder="Body" id="n_body" required></textarea>
+          <button>Publish</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Add Prospectus</h2>
+        <form id="addProspectus">
+          <input placeholder="Title" id="p_title" required />
+          <input placeholder="URL (PDF link)" id="p_url" required />
+          <button>Add</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Students</h2>
+        <table id="studentsTable">
+          <thead><tr><th>ID</th><th>Code</th><th>Name</th><th>Class</th><th>Section</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
